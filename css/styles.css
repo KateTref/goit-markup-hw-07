@@ -56,6 +56,15 @@ img {
   color: inherit;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  margin-bottom: 50px;
+}
 
             /* --- HEADER ---*/
 
@@ -261,16 +270,6 @@ img {
 .subject {
  padding-top: 0px;
 }
-.subject__title,
-.team__title {
- font-weight: 700;
- font-size: 36px;
- line-height: 1.17;
- text-align: center;
- letter-spacing: 0.03em;
- color: var(--primary-text-color);
- margin-bottom: 50px;
-}
 .subject__list {
   display: flex;
   margin-left: -30px;
@@ -309,7 +308,6 @@ img {
 .team {
  background-color: var(--btn-nav-color);
 }
-
 .team__list {
   display: flex;
   margin-left: -30px;
@@ -374,9 +372,9 @@ img {
  color: var(--white-color);
 }
 
-
              /* ---CLIENTS---*/
-.client {
+
+.clients__link {
  display: flex;
  width: 170px;
  height: 92px;
@@ -389,15 +387,21 @@ img {
  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-clients {
+.clients__list {
+  display: flex;
+  margin-left: -30px;
+  margin-top: -30px;
+  flex-wrap: wrap;
+}
+.clients__item {
  margin-left: 30px;
  margin-top: 30px;
  flex-basis: calc((100% - 180px) / 6);
 }
-.icon-item {
+.clients__icon {
  fill: currentColor;
 }
-.client:hover {
+.clients__link:hover {
  color: var(--accent-color);
  border-color: var(--accent-color);
 }
@@ -409,7 +413,6 @@ img {
  padding-top: 60px;
  padding-bottom: 60px;
 }
-
 .address__list {
  font-style: normal;
  font-weight: 400;
@@ -485,11 +488,11 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .abonnement__text {
   margin-bottom: 20px;
 }
-.form-footer {
+.abonnement__form {
   display: flex;
   align-items: center;
 }
-.label-footer {
+.abonnement__label {
   margin-right: 2px;
    font-family: var(--primary-font-family);
   font-style: normal;
@@ -499,7 +502,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-.input-wrapper {
+.abonnement__input-wrapper {
   min-width: 358px;
   border: 1px solid var(--input-border-color);
   border-radius: 4px;
@@ -508,10 +511,10 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-right: 12px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.input-wrapper:focus-within {
+.abonnement__input-wrapper:focus-within {
   border-color: var(--accent-color);
 }
-.input-item {
+.abonnement__input {
   height: 50px;
   min-width: 295px;
   border: none;
@@ -519,7 +522,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--white-color);
   outline: none;
 }
-.icon-send {
+.btn__icon-send {
   margin-left: 10px;
 }
 .abonnement__btn {
@@ -530,7 +533,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 /* --PORTFOLIO-- */
 
-.nav-btn {
+.list-selection__btn {
  font-family: var(--primary-font-family);
  font-style: normal;
  font-weight: 500;
@@ -548,48 +551,54 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
              background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
              box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.list-btn:not(:last-child) {
+.list-selection__item:not(:last-child) {
  margin-right: 8px;
 }
-.nav-btn:hover,
-.nav-btn:focus {
+.list-selection__btn:hover,
+.list-selection__btn:focus {
  background-color: var(--accent-color);
  color: var(--white-color);
  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
   0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.list-menu {
+.list-selection {
  display: flex;
  justify-content: center;
  margin-bottom: 50px;
 }
-.item-card {
+.products-list {
+  display: flex;
+  margin-left: -30px;
+  margin-top: -30px;
+  flex-wrap: wrap;
+}
+.products-list__item {
  margin-left: 30px;
  margin-top: 30px;
  flex-basis: calc((100% - 90px) / 3);
 }
-.job-container {
+.product__label {
  border: 1px solid var(--border-color);
  border-top: 0;
  background-color: var(--white-color);
  padding: 20px 24px 20px 24px;
 }
-.link-portfolio {
+.product__link {
  display: block;
  text-decoration: none;
  color: inherit;
  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.link-portfolio:hover,
-.link-portfolio:focus {
+.product__link:hover,
+.product__link:focus {
  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
   1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.portfolio-picture {
+.product__picture {
   position: relative;
   overflow: hidden;
 }
-.card-text {
+.product__text {
   position: absolute;
   top: 0;
   width: 370px;
@@ -605,11 +614,11 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.item-card:hover .card-text,
-.link-portfolio:focus .card-text {
+.product:hover .product__text,
+.product__link:focus .product__text {
   transform: translateY(0%);
 }
-.list .name-job {
+.product__name {
  font-weight: 700;
  font-size: 18px;
  line-height: 2;
@@ -617,7 +626,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  color: var(--primary-text-color);
  margin-bottom: 4px;
 }
-.kind-job {
+.product__type {
  font-size: 16px;
  line-height: 1.88;
  letter-spacing: 0.03em;
@@ -753,6 +762,13 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .link-checkbox {
   color: var(--accent-color);
+  transition: color 250ms linear,
+              font-weight 250ms linear;
+}
+.link-checkbox:hover,
+.link-checkbox:focus {
+color: var(--secondary-blue-color);
+font-weight: 500;
 }
 .check-wrap {
   width: 448px;
