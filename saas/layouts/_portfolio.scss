@@ -30,16 +30,12 @@
 }
 
 .list-selection {
-    display: flex;
-    justify-content: center;
+    @include flex-aline;
     margin-bottom: 50px;
 }
 
 .products-list {
-    display: flex;
-    margin-left: -30px;
-    margin-top: -30px;
-    flex-wrap: wrap;
+    @include grid-wrap;
 }
 
 .products-list__item {

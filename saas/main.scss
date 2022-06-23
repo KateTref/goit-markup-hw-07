@@ -1,11 +1,17 @@
 @import './utills/variables';
+@import './utills/mixins';
+
 @import './base/reset';
 @import './base/section';
 @import './base/container';
+
 @import './components/title';
 @import './components/modal';
 @import './components/logo';
 @import './components/abonnement';
+@import './components/button';
+@import './components/hidden';
+
 @import './layouts/header';
 @import './layouts/hero';
 @import './layouts/features';
