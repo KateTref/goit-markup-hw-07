@@ -1,11 +1,16 @@
 .logo {
     font-family: var(--logo-font-family);
     font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    @include font(26px, 700, 1.19);
     letter-spacing: 0.03em;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &__first-word {
+            color: var(--accent-color);
+        }
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
 }
 
 .head__logo {
@@ -24,12 +29,4 @@
 
 .logo--light {
     color: var(--white-color);
-}
-
-.logo__first-word {
-    color: var(--accent-color);
-}
-
-.logo:hover, .logo:focus {
-    color: var(--accent-color);
 }

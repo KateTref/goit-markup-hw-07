@@ -12,9 +12,7 @@
     &__list,
     &__contacts {
         font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.14;
+        @include font(14px, 500, 1.14);
         letter-spacing: 0.02em;
         }
 }
@@ -51,7 +49,6 @@
     align-items: center;
     padding-top: 8px;
     margin-left: auto;
-    color: var(--secondary-text-color);
     &__envelope,
     &__smartphone {
         margin-right: 10px;
