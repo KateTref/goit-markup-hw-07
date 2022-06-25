@@ -172,9 +172,16 @@
         }
 }
 
-.checkbox:checked+.checkbox-label::before {
-    background-color: var(--accent-color);
-    background-image: url(../images/check.svg);
-    border-color: var(--accent-color);
+// .checkbox:checked+.checkbox-label::before {
+//     background-color: var(--accent-color);
+//     background-image: url(../images/check.svg);
+//     border-color: var(--accent-color);
 
+// }
+
+.checkbox {
+    &:checked+&-label::before {
+        background: var(--accent-color) url(../images/check.svg);
+        border-color: var(--accent-color);
+    }
 }
